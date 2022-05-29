@@ -25,7 +25,7 @@ void normFunction(Mat &image, double recolorFactor, PIXEL pixel, double threshol
             return;
         }
     }
-    if (abs(red - green) / 255 < threshold)
+    if (abs(red - green) / 255 < 1 - threshold)
     {
         unsigned int rValue = round(red * (1 + recolorFactor));
         if (rValue > 255)
@@ -63,10 +63,10 @@ void normalizeColors(Mat &image, double recolorFactor=.5, double threshold=1, st
 }
 int main() {
     Mat image = imread("../../ImageIn/cbTests.jpg", IMREAD_COLOR);
-    // resize(image, image, Size(1800, 1080), INTER_LINEAR);
-    normalizeColors(image, .5, 1, "sqr_diff", .9);
+    // resize(image, image, Size(1260, 700), INTER_LINEAR);
+    normalizeColors(image, .5, 0, "sqr_diff", .9);
     imshow("Output", image);
-    imwrite("../../ImageOut/cbTests.jpg", image);
+    // imwrite("../../ImageOut/cbTests.jpg", image);
     int i = waitKey(0);
     return 0;
 }
