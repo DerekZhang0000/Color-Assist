@@ -3,14 +3,14 @@ OpenCV C++ image-processing program to help boost color differentiability among 
 
 ## Example 1
 ### Input
-![](./ImageIn/cbTests.jpg)
+![](./SampleImages/cbTests.jpg)
 
 ### Output
 ![](./ImageOut/cbTests.jpg)
 
 ## Example 2
 ### Input
-![](./ImageIn/map.jpg)
+![](./SampleImages/map.jpg)
 
 ### Output
 ![](./ImageOut/map.jpg)
