@@ -1,12 +1,10 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(Color-Assist VERSION 0.1.0)
-
+project(Color-Assist VERSION 1.0.0)
 include(CTest)
 enable_testing()
-
 find_package(OpenCV REQUIRED)
 
-add_executable(Color-Assist main.cpp)
+add_executable(Color-Assist colorAssist.cpp) 
 
 target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS})
 
